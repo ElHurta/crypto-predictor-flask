@@ -46,7 +46,7 @@ def train_data():
     pass
 
 if __name__ == '__main__':
-
+    print('la app entra y empieza')
     for coin in disponible_coins:
         coins_data[coin], coins_predictions[coin] = neural_network.train_data(coin)
 
