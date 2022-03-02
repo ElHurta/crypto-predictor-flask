@@ -13,7 +13,7 @@ against_currency = 'USD'
 
 
 def train_data(crypto_currency):
-    start = dt.datetime(2019, 1, 1)
+    start = dt.datetime(2021, 1, 1)
     end = dt.datetime.now()
 
     data = web.DataReader(f'{crypto_currency}-{against_currency}','yahoo', start, end)
