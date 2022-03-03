@@ -3,7 +3,7 @@ from flask_cors import CORS
 import neural_network
 import datetime as dt
 
-app = Flask(__name__)
+application = app = Flask(__name__)
 CORS(app)
 
 disponible_coins = ['BTC', 'ETH', 'SOL', 'ADA', 'XRP']
