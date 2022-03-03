@@ -1,1 +1,1 @@
-gunicorn -b :8000 main:app
+gunicorn -b :8000 app:app
