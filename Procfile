@@ -1,1 +1,1 @@
-web: gunicorn wsgi:app
+gunicorn -b :8000 main:app

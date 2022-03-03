@@ -41,18 +41,20 @@ def get_data():
 def index():
     return 'ola'
 
-
+@app.route('/train')
 def train_data():
-    pass
-
-if __name__ == '__main__':
     print('la app entra y empieza')
     for coin in disponible_coins:
         coins_data[coin], coins_predictions[coin] = neural_network.train_data(coin)
 
+    return jsonify({'status': 'ok'})
+
+if __name__ == '__main__':
+    
+
     # BTC_data, BTC_prediction = neural_network.train_data('BTC')
     # ETH_data, ETH_prediction = neural_network.train_data('ETH')
     # SOL_data, SOL_prediction = neural_network.train_data('SOL')
-    app.run(port=5000, debug=True)
+    app.run(port=5000)
 
     
